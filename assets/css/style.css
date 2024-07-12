@@ -502,7 +502,7 @@ html {
         white-space: nowrap;
         width: 14ch;
         overflow: hidden;
-        animation: typing 2s infinite steps(14) alternate,
+        animation: typing 2.1s infinite steps(14) alternate,
           blink 0.3s infinite step-end alternate;
       }
     }

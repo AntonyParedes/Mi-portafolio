@@ -28,9 +28,9 @@ Sombras con CSS: https://getcssscan.com/css-box-shadow-examples
   /* Colors  */
   --primary-color: light-dark(#111, #ffffffcc);
   --bg-color-section1: light-dark(#eee, #111);
-  --bg-color-section2: light-dark(#fafafa, #6a6a6a);
+  --bg-color-section2: light-dark(#fafafa, #131212);
   --bg-color-buttons: light-dark(#e0e0e0, #6a6a6a);
-  --color-morado: light-dark(#791aee, #111)
+  --bg-color-section3: light-dark(#791aee, #111)
 
   /* Typografia  */
   --normal-font-size: 16px;
@@ -101,6 +101,16 @@ html {
   .section__title {
     text-align: center;
     margin: var(--mr-3) 0;
+    padding: auto;
+
+    border: white;
+    border-radius: 50px;
+    color: var(--bg-color-section2);  
+    background-color: var(--primary-color);
+    align-items: center;
+    
+
+    
     &:hover {
       color: #791aee;
     }
@@ -132,22 +142,58 @@ html {
   background-color: var(--primary-color);
   font-weight: bolder;
 
-  
-
   &:hover {
     -webkit-transform: translateY(8px);
     transform: translateY(8px);
     box-shadow: 0px 3px 10px #791aee;
   }
+  
+
+  
 }
 
-.btn--primary {
-  color: var(--primary-color);
-  background-color: var(--bg-color-buttons);
-  &:hover {
-    color:#791aee ;
+.btn--primary{
+  animation: hvr-wobble-vertical 2s linear infinite alternate;
+}
+
+.contact__form-button{
+  animation: hvr-wobble-vertical 2s linear infinite alternate;
+}
+
+/* Wobble Vertical */
+@keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
+
+
+
+
+
+
+
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -502,7 +548,7 @@ html {
         white-space: nowrap;
         width: 14ch;
         overflow: hidden;
-        animation: typing 2.1s infinite steps(14) alternate,
+        animation: typing 2s infinite steps(14) alternate,
           blink 0.3s infinite step-end alternate;
       }
     }
@@ -620,12 +666,9 @@ html {
         padding: 0.75rem 1.5rem;
         font-weight: var(--font-semi-bold);
         font-size: var(--small-font-size);
-        background-color: var(--primary-color);
+        background-color: red;
         color: var(--bg-color-section2);
         border-radius: 5px;
-
-       
-        
       }
     }
   }
